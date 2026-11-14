@@ -4,80 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Coralina Ateliê — Peças em Resina Epóxi</title>
-  <meta name="description" content="Peças em resina epóxi feitas à mão: agendas, bandejas, canetas, chaveiros, porta-copos, quadros e eternizações.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Peças em resina epóxi feitas à mão: chaveiros, canetas, agendas, bandejas, porta-copos, quadros e eternizações.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coralina Ateliê — Peças em Resina Epóxi">
+  <meta property="og:image" content="https://coralina.art.br/assets/img/brand/coral@3x.png">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Mrs+Saint+Delafield&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="theme-resin">
-  <header class="site">
-    <div class="wrap">
-      <a class="logo" href="index.html">Coralina <small>Ateliê</small></a>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="atelie.html" class="active">Ateliê de Resina</a>
-        <a href="papelaria.html">Papelaria</a>
-      </nav>
+<body class="theme-atelie" data-page="loja" data-loja="atelie">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="coll-band">
+      <div class="wrap">
+        <nav class="breadcrumb" id="breadcrumb" aria-label="Você está em"></nav>
+        <div class="coll-hero">
+          <h1 id="coll-title" data-titulo="Coralina Ateliê — Peças em Resina Epóxi">Coralina Ateliê</h1>
+          <p id="coll-intro"></p>
+          <div class="pills" id="pills"></div>
+        </div>
+      </div>
     </div>
-  </header>
 
-  <div class="page-hero">
     <div class="wrap">
-      <h1>Coralina Ateliê</h1>
-      <p>Peças em resina epóxi, feitas à mão e pensadas para guardar momentos e dar charme ao dia a dia.</p>
-      <a class="btn" href="https://wa.me/558299960787?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20pe%C3%A7a%20em%20resina." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
-      <a class="btn outline" href="https://www.instagram.com/coralinaateliee" target="_blank" rel="noopener">@coralinaateliee</a>
+      <div class="toolbar">
+        <span class="count" id="count" aria-live="polite"></span>
+        <div class="toolbar-actions">
+          <button class="filter-btn" id="filter-open" aria-controls="filters">Filtrar <span class="n" id="filter-n" hidden>0</span></button>
+          <label class="sr-only" for="sort">Ordenar por</label>
+          <select class="select" id="sort">
+            <option value="">Ordenar: padrão</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+            <option value="nome">Nome (A–Z)</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
     </div>
-  </div>
-
-  <main class="wrap">
-    <section class="block">
-      <h2>O que fazemos</h2>
-      <p class="lead">Algumas das peças do ateliê. Tem outra ideia? Chame a gente!</p>
-      <div class="grid">
-        <div class="item"><span class="emoji">📒</span><h3>Agendas</h3><p>Capas e detalhes em resina.</p></div>
-        <div class="item"><span class="emoji">🍽️</span><h3>Bandejas</h3><p>Para servir ou decorar.</p></div>
-        <div class="item"><span class="emoji">🖊️</span><h3>Canetas</h3><p>Únicas e personalizadas.</p></div>
-        <div class="item"><span class="emoji">🔑</span><h3>Chaveiros</h3><p>Lembranças para levar junto.</p></div>
-        <div class="item"><span class="emoji">☕</span><h3>Porta-copos</h3><p>Conjuntos cheios de estilo.</p></div>
-        <div class="item"><span class="emoji">🖼️</span><h3>Quadros</h3><p>Arte para a parede.</p></div>
-        <div class="item"><span class="emoji">✨</span><h3>Eternizações</h3><p>Guarde o que é especial para sempre.</p></div>
-        <div class="item"><span class="emoji">💎</span><h3>E mais!</h3><p>Acessórios e peças sob encomenda.</p></div>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2>Como encomendar</h2>
-      <p class="lead">Simples e sem complicação.</p>
-      <ol class="steps">
-        <li>Conte pelo WhatsApp qual peça você quer.</li>
-        <li>Combinamos cores, detalhes e prazo.</li>
-        <li>Produzimos com carinho e entregamos a você.</li>
-      </ol>
-    </section>
-
-    <section class="block">
-      <div class="cta">
-        <h2>Vamos criar a sua peça?</h2>
-        <p>Atendimento pelo WhatsApp e pelo Instagram.</p>
-        <a class="btn" href="https://wa.me/558299960787" target="_blank" rel="noopener">Falar no WhatsApp</a>
-      </div>
-    </section>
-
-    <section class="block" style="padding-top:0">
-      <div class="cta" style="background:var(--paper-soft)">
-        <h2 style="color:#3f2570">Procurando papelaria personalizada?</h2>
-        <p>Conheça também a Coralina Papelaria.</p>
-        <a class="btn" style="background:var(--paper)" href="papelaria.html">Ir para a Papelaria →</a>
-      </div>
-    </section>
   </main>
 
-  <footer class="site">
-    <div class="links">
-      <a href="https://www.instagram.com/coralinaateliee" target="_blank" rel="noopener">Instagram Ateliê</a>
-      <a href="https://www.instagram.com/coralinapapelaria" target="_blank" rel="noopener">Instagram Papelaria</a>
-      <a href="https://wa.me/558299960787" target="_blank" rel="noopener">WhatsApp</a>
+  <div class="scrim" id="scrim" data-close-filters></div>
+  <aside class="filters" id="filters" aria-label="Filtros">
+    <div class="filters-head"><h2>Filtrar</h2><button class="icon-btn" data-close-filters aria-label="Fechar filtros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="filters-body">
+      <fieldset><legend>Características</legend><div id="f-tags"></div></fieldset>
+      <fieldset><legend>Preço</legend>
+        <label class="check"><input type="radio" name="preco" value=""> Todos</label>
+        <label class="check"><input type="radio" name="preco" value="com"> Com preço</label>
+        <label class="check"><input type="radio" name="preco" value="encomenda"> Sob encomenda</label>
+      </fieldset>
     </div>
-    <p>© Coralina — feito com carinho.</p>
-  </footer>
+    <div class="filters-foot"><button class="btn btn--outline" id="f-clear">Limpar</button><button class="btn" data-close-filters>Ver produtos</button></div>
+  </aside>
+
+  <div id="site-footer"></div>
+  <noscript><p style="padding:2rem;text-align:center">Ative o JavaScript para ver o catálogo, ou acesse <a href="https://wa.me/c/558299960787">nosso catálogo no WhatsApp</a>.</p></noscript>
+  <script src="data/catalogo.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/loja.js"></script>
 </body>
 </html>

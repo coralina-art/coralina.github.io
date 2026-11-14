@@ -3,51 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coralina — Ateliê de Resina e Papelaria</title>
-  <meta name="description" content="Coralina: peças em resina epóxi feitas à mão e papelaria criativa e personalizada.">
-  <link rel="stylesheet" href="style.css">
+  <title>Coralina — Ateliê de Resina e Papelaria Personalizada</title>
+  <meta name="description" content="Coralina: peças em resina epóxi feitas à mão. Papelaria personalizada em breve. Escolha no catálogo e peça pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coralina — Ateliê de Resina e Papelaria">
+  <meta property="og:description" content="Criando memórias com resina e papel.">
+  <meta property="og:image" content="https://coralina.art.br/assets/img/brand/coral@3x.png">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Mrs+Saint+Delafield&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <header class="site">
-    <div class="wrap">
-      <a class="logo" href="index.html">Coralina</a>
-      <nav>
-        <a href="index.html" class="active">Início</a>
-        <a href="atelie.html">Ateliê de Resina</a>
-        <a href="papelaria.html">Papelaria</a>
-      </nav>
-    </div>
-  </header>
+<body data-page="home">
+  <div id="site-header"></div>
 
-  <main class="wrap">
+  <main>
     <section class="hero">
-      <h1>Criando memórias com <span>resina</span> e <span>papel</span></h1>
-      <p>A Coralina reúne duas frentes criativas: um ateliê de peças em resina epóxi e uma papelaria personalizada. Escolha por onde começar.</p>
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Criando memórias com <span class="script">resina</span> e papel</h1>
+          <p class="lead">Um ateliê de peças em resina epóxi feitas à mão. Escolha no catálogo e peça pelo WhatsApp. A papelaria personalizada chega em breve.</p>
+          <div class="hero-cta">
+            <a class="btn" href="atelie.html">Ver o Ateliê</a>
+            <span class="btn btn--lilac btn--soon" aria-disabled="true">Papelaria · Em breve</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img class="coral" src="assets/img/brand/coral@3x.png" alt="">
+          <span id="hero-stickers"></span>
+        </div>
+      </div>
     </section>
 
-    <section class="choose">
-      <a class="card-big card-resin" href="atelie.html">
-        <span class="emoji">🌊</span>
-        <h2>Coralina Ateliê</h2>
-        <p>Peças em resina epóxi: agendas, bandejas, canetas, chaveiros, porta-copos, quadros e eternizações.</p>
-        <span class="go">Conhecer o ateliê →</span>
-      </a>
-      <a class="card-big card-paper" href="papelaria.html">
-        <span class="emoji">💜</span>
-        <h2>Coralina Papelaria</h2>
-        <p>Papelaria criativa e personalizada: brindes, cartões, lembrancinhas, sacolas, tags e presentes criativos.</p>
-        <span class="go">Conhecer a papelaria →</span>
-      </a>
+    <section class="section">
+      <div class="wrap">
+        <div class="shops">
+          <a class="shop-card shop-card--atelie" href="atelie.html">
+            <div><h3>Coralina Ateliê</h3><p>Chaveiros, canetas, agendas, bandejas, quadros e eternizações em resina epóxi.</p></div>
+            <div><div class="shop-thumbs" id="thumbs-atelie"></div><span class="go">Entrar no ateliê <svg viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h21M17 1l5 5-5 5"/></svg></span></div>
+          </a>
+          <div class="shop-card shop-card--papelaria shop-card--soon" aria-disabled="true">
+            <div><span class="soon-tag soon-tag--lg">Em breve</span><h3>Coralina Papelaria</h3><p>Convites, cartões, lembrancinhas, sacolas, tags e tudo personalizado do seu jeito. Estamos preparando novidades.</p></div>
+            <div><span class="go">Em breve por aqui</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div><h2>Destaques</h2><p>Algumas das peças mais especiais do ateliê.</p></div><a class="link-arrow" href="atelie.html">Ver tudo no ateliê</a></div>
+        <div class="grid" id="destaques" style="padding-top:0"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div><h2>Escolha por categoria</h2></div></div>
+        <div class="cat-grid" id="categorias"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="panel panel--lilac oceans-grid">
+          <div>
+            <p class="eyebrow" style="color:var(--ink)">Coleção</p>
+            <h2>Oceans<span class="script" style="display:block;color:var(--violet-dark);font-size:.9em;line-height:.9;margin-top:.1em">com maresia</span></h2>
+            <p id="oceans-text"></p>
+            <a class="btn btn--ink" id="oceans-link" href="atelie.html">Ver a coleção</a>
+          </div>
+          <div class="oceans-items" id="oceans-items"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="wrap">
+        <div class="section-head"><div><h2>Como encomendar</h2><p>Do pedido à entrega, com carinho.</p></div></div>
+        <ol class="steps">
+          <li class="step"><h3>Escolha</h3><p>Navegue pelo ateliê e escolha o que mais combina com você.</p></li>
+          <li class="step"><h3>Chame no WhatsApp</h3><p>Clique em “Quero Encomendar” e você cai direto no nosso catálogo no WhatsApp.</p></li>
+          <li class="step"><h3>Combine os detalhes</h3><p>Definimos tema, cores, personalização, quantidade e prazo.</p></li>
+          <li class="step"><h3>Receba com carinho</h3><p>Aprovado o pedido, produzimos e entregamos a você.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div><h2>Por que Coralina?</h2></div></div>
+        <ul class="why">
+          <li><span class="dot" aria-hidden="true">🖐️</span><strong>Feito à mão</strong><span>Cada peça é produzida com cuidado, uma por vez.</span></li>
+          <li><span class="dot" aria-hidden="true">✏️</span><strong>Personalizado</strong><span>Nomes, frases, fotos, datas e temas do seu jeito.</span></li>
+          <li><span class="dot" aria-hidden="true">🌸</span><strong>Flores naturais</strong><span>Peças que guardam flores de verdade em resina.</span></li>
+          <li><span class="dot" aria-hidden="true">🌊</span><strong>Coleção Oceans</strong><span>Conchas e estrelas-do-mar importadas, sem coleta nas praias brasileiras.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div><h2>Perguntas frequentes</h2></div></div>
+        <div class="faq">
+          <details><summary>Como faço para comprar?</summary><p>Escolha o produto aqui no site e clique em “Quero Encomendar”. Você vai direto para o nosso catálogo no WhatsApp, onde finalizamos o pedido.</p></details>
+          <details><summary>O que significa “Faça sua encomenda”?</summary><p>São itens feitos sob medida, sem preço fixo. Chame no WhatsApp, conte a sua ideia e combinamos valores, quantidade e prazo.</p></details>
+          <details><summary>Vocês personalizam?</summary><p>Sim! Muitas peças aceitam nome, frase, foto, data ou logo. Em cada produto você vê o que pode ser personalizado, e se tiver outra ideia, é só chamar.</p></details>
+          <details><summary>Vendem no atacado?</summary><p>Alguns itens têm preço especial para quantidade, como chaveiros e canetas. Você encontra a condição na página de cada produto.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="panel panel--peach cta-band">
+          <h2>Vamos criar a sua peça?</h2>
+          <p>Atendimento pelo WhatsApp e pelo Instagram.</p>
+          <div class="row">
+            <a class="btn" href="https://wa.me/c/558299960787" target="_blank" rel="noopener">Ver catálogo no WhatsApp</a>
+            <a class="btn btn--outline" href="https://www.instagram.com/coralinaateliee" target="_blank" rel="noopener">@coralinaateliee</a>
+            <a class="btn btn--outline" href="https://www.instagram.com/coralinapapelaria" target="_blank" rel="noopener">@coralinapapelaria</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site">
-    <div class="links">
-      <a href="https://www.instagram.com/coralinaateliee" target="_blank" rel="noopener">Instagram Ateliê</a>
-      <a href="https://www.instagram.com/coralinapapelaria" target="_blank" rel="noopener">Instagram Papelaria</a>
-      <a href="https://wa.me/558299960787" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-    <p>© Coralina — feito com carinho.</p>
-  </footer>
+  <div id="site-footer"></div>
+  <noscript><p style="padding:2rem;text-align:center">Ative o JavaScript para ver o catálogo, ou acesse <a href="https://wa.me/c/558299960787">nosso catálogo no WhatsApp</a>.</p></noscript>
+  <script src="data/catalogo.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
 </html>
